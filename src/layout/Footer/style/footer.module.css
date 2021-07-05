@@ -1,0 +1,11 @@
+.app__base {
+  height: 100%;
+  width: 100%;
+  background: var(--dark);
+}
+
+.app__base p {
+  color: var(--primary);
+  text-align: center;
+  padding: 25px 0;
+}

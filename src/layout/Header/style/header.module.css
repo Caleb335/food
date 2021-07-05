@@ -1,0 +1,14 @@
+.app__head {
+  height: 80px;
+  width: 100%;
+  background: var(--dark);
+  padding: 17px 0;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.app__head h1 {
+  text-align: center;
+  color: var(--primary);
+}
