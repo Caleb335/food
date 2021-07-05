@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -16,34 +17,74 @@ a {
 
 /* card style begins here */
 .meal-card {
-  border: 1px solid red;
   height: 100%;
-  width: 240px;
+  width: 350px;
   padding-top: 10px 10px;
+  margin: 10px 0 45px 0;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 3px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
-.meal-card .img-container {
-  height: 37%;
+.meal-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in 0.3s;
 }
 
 .img-container img {
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.card-body {
+  padding: 10px 12px;
 }
 
 .card-body .title {
   display: flex;
   justify-content: space-between;
-  border: 1px solid purple;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark);
+  line-height: 20px;
+  margin: 15px 0 0 0;
+}
+
+.meal-id .sub-meal-name {
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .meal-desc {
   height: 100%;
-  border: 1px solid teal;
   text-align: justify;
   padding: 5px 0;
 }
 
+.meal-desc p {
+  line-height: 20px;
+}
+
+.card-base {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-base p {
+  padding: 18px 0 0 14px;
+}
+
+.card-base button {
+  height: 60px;
+  width: 80px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 8px;
+  color: var(--text-main);
+  font-size: 35px;
+}
 /* card component style ends here */
 
 /* button component style starts here */
@@ -53,4 +94,13 @@ a {
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   background: var(--primary);
+  border: none;
+}
+
+/* button component style ends here */
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .meal-card {
+    width: 100%;
+  }
 }

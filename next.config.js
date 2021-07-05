@@ -1,7 +1,10 @@
 module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ["https://www.themealdb.com"],
-  },
   target: "experimental-serverless-trace",
+};
+
+module.exports = {
+  images: {
+    domains: ["www.themealdb.com"],
+  },
 };

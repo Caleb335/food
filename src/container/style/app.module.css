@@ -1,12 +1,27 @@
 .app__root {
-  padding: 18px 35px;
+  padding: 18px 105px;
   min-height: 80vh;
   margin-top: 6%;
 }
 
-@media only screen and (max-width: 768px) {
+.food__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .app__root {
+    min-height: 100vh;
+    padding: 14px 16px;
+    margin-top: 22%;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
   .app__root {
     min-height: 100vh;
     margin-top: 16%;
+    padding: 14px 16px;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import propTypes from "react";
 import Image from "next/image";
 import Button from "./Buttons";
+import { FiPlus } from "react-icons/fi";
 
 const Card = ({
   className,
@@ -16,32 +16,34 @@ const Card = ({
   return (
     <div className={`meal-card ${className}`} {...props}>
       <div className="img-container">
-        <Image src={mealImg} layout="fill" />
+        <Image
+          className="meal-img"
+          src={mealImg}
+          width={350}
+          height={200}
+          layout="responsive"
+        />
       </div>
       <div className="card-body">
         <div className="title">
-          <p className="meal-name">{mealName}</p>
-          <p className="sub-meal-name">{subName}</p>
+          <div className="meal-id">
+            <p className="meal-name">{mealName}</p>
+            <p className="sub-meal-name">{subName}</p>
+          </div>
           <p className="meal-price">{mealPrice}</p>
         </div>
         <div className="meal-desc">
           <p>{mealDescription}</p>
         </div>
-        <div className="card-base">
-          <p className="ratings">stars</p>
-          <Button>plus</Button>
-        </div>
+      </div>
+      <div className="card-base">
+        <p className="ratings">stars</p>
+        <Button>
+          <FiPlus />
+        </Button>
       </div>
     </div>
   );
 };
 
 export default Card;
-
-// Card.propTypes = {
-//   mealPrice: propTypes.string,
-//   mealName: propTypes.string.isRequired,
-//   mealImg: propTypes.node.isRequired,
-//   mealDescription: propTypes.string.isRequired,
-//   mealRatings: propTypes.node.isRequired,
-// };

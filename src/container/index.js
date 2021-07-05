@@ -40,7 +40,9 @@ const App = () => {
 
   return (
     <section className={style.app__root}>
-      {!foodResult ? "Loading" : foodResult}
+      <div className={style.food__container}>
+        {foodResult ? foodResult : <p>Loading...</p>}
+      </div>
     </section>
   );
 };
