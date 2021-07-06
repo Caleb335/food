@@ -17,11 +17,7 @@ const App = () => {
   const [loading, setLoading] = React.useState(true);
 
   const getFoods = () => {
-    fetch("https://asm-dev-api.herokuapp.com/api/v1/food", {
-      headers: {
-        "Access-Control-Allow-Origin": "https://fooodiez.netlify.app",
-      },
-    })
+    fetch("https://asm-dev-api.herokuapp.com/api/v1/food")
       .then((res) => res.json())
       .then((data) => {
         setFood(data.data.meals);
