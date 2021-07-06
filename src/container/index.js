@@ -9,6 +9,7 @@ const loaderStyle = css`
   display: block;
   margin: 0 auto;
   transform: translate(35%, 380%);
+  color: rgb(243, 141, 32);
 `;
 
 const App = () => {
