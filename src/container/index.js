@@ -19,7 +19,7 @@ const App = () => {
   const getFoods = () => {
     fetch("https://asm-dev-api.herokuapp.com/api/v1/food", {
       headers: {
-        "Access-Control-Allow-Origin": "no-cors",
+        "Access-Control-Allow-Origin": "https://fooodiez.netlify.app",
       },
     })
       .then((res) => res.json())
