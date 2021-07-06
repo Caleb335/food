@@ -2,6 +2,14 @@ import React from "react";
 import style from "./style/app.module.css";
 import Card from "../components/Card";
 import Button from "../components/Buttons";
+import HashLoader from "react-spinners/HashLoader";
+import { css } from "@emotion/react";
+
+const loaderStyle = css`
+  display: block;
+  margin: 0 auto;
+  transform: translate(35%, 380%);
+`;
 
 const App = () => {
   const [food, setFood] = React.useState([]);
@@ -43,7 +51,11 @@ const App = () => {
   return (
     <section className={style.app__root}>
       <div className={style.food__container}>
-        {loading ? foodResult : setLoading("Loading...")}
+        {!loading ? (
+          foodResult
+        ) : (
+          <HashLoader loading={loading} size={60} css={loaderStyle} />
+        )}
       </div>
       <div className={style.btn__wrapper}>
         <Button className={style.app__btn}>Learn more</Button>
