@@ -1,16 +1,18 @@
 import React from "react";
 import style from "./style/app.module.css";
 import Card from "../components/Card";
+import Button from "../components/Buttons";
 
 const App = () => {
   const [food, setFood] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
   const getFoods = () => {
     fetch("https://asm-dev-api.herokuapp.com/api/v1/food")
       .then((res) => res.json())
       .then((data) => {
         setFood(data.data.meals);
-        console.log(data.data.meals);
+        setLoading(false);
       })
       .catch((err) => JSON.stringify(err));
   };
@@ -41,7 +43,10 @@ const App = () => {
   return (
     <section className={style.app__root}>
       <div className={style.food__container}>
-        {!foodResult ? "Loading..." : foodResult}
+        {loading ? foodResult : setLoading("Loading...")}
+      </div>
+      <div className={style.btn__wrapper}>
+        <Button className={style.app__btn}>Learn more</Button>
       </div>
     </section>
   );

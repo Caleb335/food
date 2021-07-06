@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "./Buttons";
 import { FiPlus } from "react-icons/fi";
+import ReactStars from "react-rating-stars-component";
 
 const Card = ({
   className,
@@ -37,7 +38,14 @@ const Card = ({
         </div>
       </div>
       <div className="card-base">
-        <p className="ratings">stars</p>
+        <div className="ratings">
+          <ReactStars
+            count={mealRatings}
+            size={24}
+            isHalf={true}
+            color="rgb(243, 141, 32)"
+          />
+        </div>
         <Button>
           <FiPlus />
         </Button>

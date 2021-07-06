@@ -10,6 +10,27 @@
   justify-content: space-between;
 }
 
+.btn__wrapper {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.app__btn {
+  background: var(--primary);
+  height: 50px;
+  width: 145px;
+  border: none;
+  color: var(--text-main);
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 35px;
+  text-transform: capitalize;
+}
+
+.app__btn:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 576px) {
   .app__root {
     min-height: 100vh;

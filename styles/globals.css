@@ -72,8 +72,8 @@ a {
   width: 100%;
 }
 
-.card-base p {
-  padding: 18px 0 0 14px;
+.card-base .ratings {
+  padding: 10px 0 0 14px;
 }
 
 .card-base button {

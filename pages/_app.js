@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <title>Home | Foodies</title>
-        <meta name="theme-color" content="rgb(243, 141, 32)" />
+        <meta name="theme-color" content="#000" />
+        <link rel="icon" href="/diet.png" />
       </Head>
       <Component {...pageProps} />
     </React.Fragment>
