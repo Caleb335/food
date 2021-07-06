@@ -8,7 +8,7 @@ import { css } from "@emotion/react";
 const loaderStyle = css`
   display: block;
   margin: 0 auto;
-  transform: translate(35%, 380%);
+  transform: translateY(380%);
   color: rgb(243, 141, 32);
 `;
 
@@ -17,7 +17,11 @@ const App = () => {
   const [loading, setLoading] = React.useState(true);
 
   const getFoods = () => {
-    fetch("https://asm-dev-api.herokuapp.com/api/v1/food")
+    fetch("https://asm-dev-api.herokuapp.com/api/v1/food", {
+      headers: {
+        "Access-Control-Allow-Origin": "no-cors",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setFood(data.data.meals);
